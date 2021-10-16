@@ -1,0 +1,9 @@
+package br.com.gsl.controleDeAcesso.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import br.com.gsl.controleDeAcesso.entity.Menu;
+
+public interface MenuRepository extends JpaRepository<Menu, Integer> {
+
+}

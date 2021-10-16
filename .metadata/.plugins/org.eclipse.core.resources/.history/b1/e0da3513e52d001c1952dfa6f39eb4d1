@@ -1,0 +1,14 @@
+package br.com.gsl.controleDeAcesso.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import br.com.gsl.controleDeAcesso.entity.Menu;
+
+@Repository
+public interface MenuRepository extends JpaRepository<Menu, Integer> {
+
+		@Query("SELECT p FROM Menu p WHERE p.permission_id =: permission")
+		Menu findByMenu(@Param("") Integer permission);
+}
