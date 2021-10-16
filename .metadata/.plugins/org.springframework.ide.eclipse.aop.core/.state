@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<aop-reference-model>
-<aop-project name="config-server"/>
-<aop-project name="GSL-ModuloInformacaoCadastral"/>
-<aop-project name="GSL-ModuloControleAcesso"/>
-<aop-project name="GSL-ModuloServicoAoCliente"/>
-<aop-project name="eurekaServer"/>
-</aop-reference-model>
