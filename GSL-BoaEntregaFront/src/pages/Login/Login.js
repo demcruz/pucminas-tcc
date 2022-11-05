@@ -35,15 +35,14 @@ const Login = () => {
           history.replace("/gsl/entrega");
         })
         .catch((e) => {
-          alert("logado com erro");
-          history.push("/gsl");
+          history.push("/");
         });
     } catch (e) {
       alert(e.message);
     }
   }
 
-  const notify = () => toast("Você precisa Logar !!!");
+  const notify = () => toast("UserName ou password incorretos !!!");
 
   return (
     <div>
@@ -59,6 +58,7 @@ const Login = () => {
                 <i className="fas fa-user"></i>
               </span>
             </div>
+            
             <input
               type="text"
               className="form-control"
@@ -89,7 +89,7 @@ const Login = () => {
               required
             />
           </div>
-          <Link to="/gsl/Cadastro">
+          <Link to="/Cadastro">
             <p class="text--center">Cadastre-se Aqui</p>
           </Link>
           <button id="login" className="btn btn-dark btn-lg btn-block" onClick={notify}>

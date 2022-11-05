@@ -16,6 +16,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -47,9 +48,25 @@ public class User implements UserDetails, Serializable {
 
 	@Column(name = "user_name", unique = true)
 	private String userName;
+	
+	@Column(name = "sobreNome")
+	private String sobreNome;
+	
+	@Column(name = "email", unique = true)
+	private String email;
 
 	@Column(name = "password")
 	private String password;
+	
+	@Column(name="cpfOucnpj", unique = true)
+	private String cpfoucnpj;
+	
+	@Column(name = "celular")
+	private String celular;
+	
+	@OneToMany(targetEntity = Endereco.class, cascade = CascadeType.ALL)
+	@JoinColumn(name = "user_fk", referencedColumnName = "id")
+	private List <Endereco> endereco;
 
 	@Column(name = "accountNonExpired")
 	private Boolean accountNonExpired;

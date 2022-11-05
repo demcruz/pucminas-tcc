@@ -11,10 +11,10 @@ const Map = ({ formattedOrigin, formattedDestination }) => {
       origin: formattedOrigin,
       destination: formattedDestination,
       travelMode: google.maps.TravelMode.DRIVING,
+      unitSystem: google.maps.UnitSystem.METRIC,
       drivingOptions: {
         departureTime: new Date(Date.now() ),
       },
-      unitSystem: google.maps.UnitSystem.pessimistic
     },
     (result, status) => {
       if (status === google.maps.DirectionsStatus.OK) {
@@ -24,6 +24,7 @@ const Map = ({ formattedOrigin, formattedDestination }) => {
       }
     }
   );
+  
   return (
     <section className="googleMap">
       <GoogleMap defaultZoom={8} defaultCenter={{ lat: 41.75, lng: 1.8 }}>

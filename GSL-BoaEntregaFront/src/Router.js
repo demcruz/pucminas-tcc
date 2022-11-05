@@ -15,17 +15,14 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/gsl" component={Login} />
-        <Route path="/gsl/Cadastro" component={Cadastro} />
+        <Route exact path="/" component={Login} />
+        <Route path="/Cadastro" component={Cadastro} />
         <Layout>
           <PrivateRoute path="/gsl/novoPedido" component={NovoPedido} />
           <PrivateRoute path="/gsl/acompanhamento" component={Acompanhamento} />
           <PrivateRoute path="/gsl/historico" component={Historico} />
           <PrivateRoute path="/gsl/extratoeNotas" component={ExtratoeNotas} />
-
           <PrivateRoute path="/gsl/perfil" component={Perfil} />
-          
-
         </Layout>
       </Switch>
     </BrowserRouter>

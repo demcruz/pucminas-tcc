@@ -67,7 +67,7 @@ const Header = () => {
               <img src="profile.jpg" alt="Sair" />
             </div>
 
-            <Link to="/gsl">
+            <Link to="/">
               <i className="bx bx-log-out" id="log_out" onClick={logout}></i>
             </Link>
           </li>
